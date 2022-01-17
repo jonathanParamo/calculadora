@@ -8,23 +8,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="general">
-    <div id="visual">
+  <div class="contenedor_padre">
+    <div class="visual">
+      <h1>Calculadora</h1>
       <input id="num_uno" type="number" placeholder="Ingresa un numero">
       <input id="num_dos" type="number" placeholder="Ingresa un numero">
-      <button id="button" onclick="sendNumbers()">=</button>
-      <div id="operaciones">
-        <button onclick="suma()" id="suma">+</button>
-        <button onclick="resta()" id="resta">-</button>
-        <button onclick="multiplicacion()" id="multiplicacion">x</button>
-        <button onclick="divicion()" id="division">/</button>
+      <div class="botones_operaciones_matematicas">
+        <button id="suma" onclick="suma()" >sumar</button>
+        <button id="resta" onclick="resta()" >restar</button>
+        <button id="multiplicacion" onclick="multiplicacion()" >multiplicar</button>
+        <button id="division" onclick="division()" >dividir</button>
       </div>
       <div id="resultado"></div>
     </div>
-    
-   
   </div>
-  <script src=""></script>
-  
 </body>
 </html>
