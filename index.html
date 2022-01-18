@@ -5,8 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calculadora</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+  <div class="contenedor_padre">
+    <div class="visual">
+      <h1>Calculadora</h1>
+      <input id="num_uno" type="number" placeholder="Ingresa un numero">
+      <input id="num_dos" type="number" placeholder="Ingresa un numero">
+      <div class="botones_operaciones_matematicas">
+        <button id="suma" onclick="suma()" >sumar</button>
+        <button id="resta" onclick="resta()" >restar</button>
+        <button id="multiplicacion" onclick="multiplicacion()" >multiplicar</button>
+        <button id="division" onclick="division()" >dividir</button>
+      </div>
+      <div id="resultado"></div>
+    </div>
+  </div>
 </body>
 </html>
