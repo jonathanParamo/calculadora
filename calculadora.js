@@ -51,6 +51,6 @@ function division(){
         <p> Resultado: ${div} </p>
         `
       resultado.innerHTML = imprimir;
-      }
-      }
+  }
+}
 
