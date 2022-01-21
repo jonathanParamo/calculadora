@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .diseno_visual_calculadora {
@@ -63,6 +64,18 @@
   justify-content: space-around;
 }
 
+@media (max-width: 600px) {
+  .botones_operaciones_matematicas{
+    display: flex;
+    flex-direction: column;
+    font-size: 5px;
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding: 0%;
+    word-wrap: break-word
+  }
+}
+
 .botones_operaciones_matematicas button {
   width: 30%;
   height: 40%;
@@ -72,6 +85,17 @@
   border: solid black 1px;
   font-size: 10px;
   font-weight: bold;
+}
+
+.botones_operaciones_matematicas {
+  button {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  button {
+    flex-grow: 1;
+    flex-wrap: 20rem;
+  }
 }
 
 .botones_operaciones_matematicas button:hover{

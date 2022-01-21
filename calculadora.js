@@ -9,12 +9,13 @@ function recibir_numeros(){
   return numeros;
 }
 
+const resultado = document.getElementById("resultado");
+
 function suma(){
   let {num, num1} = recibir_numeros();
   if(num && num1){
-    const resultado = document.getElementById("resultado");
     const sum = num + num1;
-    const imprimir = `<p> Resultado: ${sum} </p>`
+    const imprimir = ` <p> Resultado: ${sum} </p> `
     resultado.innerHTML = imprimir;
   }
 }
@@ -22,9 +23,8 @@ function suma(){
 function resta(){
   const {num, num1} = recibir_numeros();
   if(num && num1){
-    const resultado = document.getElementById("resultado");
     const res = num - num1;
-    const imprimir =`<p> Resultado: ${res} </p>`
+    const imprimir =` <p> Resultado: ${res} </p> `
     resultado.innerHTML = imprimir;
   }
 }
@@ -33,9 +33,9 @@ function resta(){
 function multiplicacion(){
   const {num, num1} = recibir_numeros();
   if(num && num1){
-    const resultado = document.getElementById("resultado");
+    
     const mul = num * num1;
-    const imprimir = `<p> Resultado: ${mul} </p>`
+    const imprimir = ` <p> Resultado: ${mul} </p> `
     resultado.innerHTML = imprimir;
   }
 }
@@ -43,9 +43,15 @@ function multiplicacion(){
 function division(){
   const {num, num1} = recibir_numeros();
   if(num && num1){
-    const resultado = document.getElementById("resultado");
     const div = num / num1;
-    const imprimir =`<p> Resultado: ${div} </p>`
+    const imprimir =` <p> Resultado: ${div} </p> `
     resultado.innerHTML = imprimir;
   }
+}
+
+function borrar() {
+  let {num, num1} = recibir_numeros();
+  num = document.getElementById("num_uno").value = "";
+  num = document.getElementById("num_dos").value = "";
+
 }
