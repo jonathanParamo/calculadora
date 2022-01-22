@@ -53,8 +53,13 @@
 }
 
 .diseno_visual_calculadora button {
+  text-transform: lowercase;
   margin-top: 2%;
 }
+
+.diseno_visual_calculadora button:first-letter {
+  text-transform: uppercase;
+} 
 
 .botones_operaciones_matematicas {
   width: 60%;

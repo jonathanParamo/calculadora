@@ -50,8 +50,8 @@ function division(){
 }
 
 function borrar() {
-  let {num, num1} = recibir_numeros();
-  num = document.getElementById("num_uno").value = "";
-  num = document.getElementById("num_dos").value = "";
-
+  document.getElementById("num_uno").value = "";
+  document.getElementById("num_dos").value = "";
+  const imprimir =``
+  resultado.innerHTML = imprimir;
 }
