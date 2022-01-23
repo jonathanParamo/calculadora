@@ -9,18 +9,20 @@
 </head>
 <body>
   <div class="contenedor_padre">
-    <div class="visual">
-      <h1>Calculadora</h1>
+    <div class="diseno_visual_calculadora">
+      <h1>calculadora</h1>
       <input id="num_uno" type="number" placeholder="Ingresa un numero">
       <input id="num_dos" type="number" placeholder="Ingresa un numero">
       <div class="botones_operaciones_matematicas">
-        <button id="suma" onclick="suma()" >sumar</button>
-        <button id="resta" onclick="resta()" >restar</button>
-        <button id="multiplicacion" onclick="multiplicacion()" >multiplicar</button>
-        <button id="division" onclick="division()" >dividir</button>
+        <button onclick="suma()" >suma</button>
+        <button onclick="resta()" >resta</button>
+        <button onclick="multiplicacion()" >multiplicar</button>
+        <button onclick="division()" >dividir</button>
+        <button onclick="borrar()">borrar</button>
       </div>
       <div id="resultado"></div>
     </div>
   </div>
+  <script src="calculadora.js"></script>
 </body>
 </html>

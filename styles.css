@@ -6,9 +6,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
-.visual {
+.diseno_visual_calculadora {
   width: 45%;
   height: 60%;
   background: #e5e5e5;
@@ -19,13 +20,46 @@
   border-radius: 3%;
 }
 
-.visual input {
+.diseno_visual_calculadora h1 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  border: 2px solid;
+  border-color: #318aac;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.diseno_visual_calculadora h1:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease;
+}
+.diseno_visual_calculadora h1:hover:before {
+  width: 100%;
+
+}
+
+.diseno_visual_calculadora input {
   margin: 2%
 }
 
-.visual button {
+.diseno_visual_calculadora button {
+  text-transform: lowercase;
   margin-top: 2%;
 }
+
+.diseno_visual_calculadora button:first-letter {
+  text-transform: uppercase;
+} 
 
 .botones_operaciones_matematicas {
   width: 60%;
@@ -35,17 +69,42 @@
   justify-content: space-around;
 }
 
+@media (max-width: 600px) {
+  .botones_operaciones_matematicas{
+    display: flex;
+    flex-direction: column;
+    font-size: 5px;
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding: 0%;
+    word-wrap: break-word
+  }
+}
+
 .botones_operaciones_matematicas button {
   width: 30%;
   height: 40%;
   margin: 10px 10px;
   background: #3a86ff;
-  border-radius: 3%;
+  border-radius: 10px;
   border: solid black 1px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.botones_operaciones_matematicas {
+  button {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  button {
+    flex-grow: 1;
+    flex-wrap: 20rem;
+  }
 }
 
 .botones_operaciones_matematicas button:hover{
-  cursor: move;
+  cursor: pointer;
   background: #03396C;
   color: #d8e2dc;
   transition: 1s;
@@ -53,11 +112,21 @@
 }
 
 #resultado p {
-  width: 80%;
-  height: 60%;
-  margin: 10px 30px;
-  background: #bee1e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#resultado p:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
 }
